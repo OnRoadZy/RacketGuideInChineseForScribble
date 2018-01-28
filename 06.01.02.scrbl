@@ -9,7 +9,7 @@
                      setup/link
                      racket/date))
 
-@section{库集合}
+@title{库集合}
 
 一个 @deftech{集合（collection）}是已安装的库模块的按等级划分的组。一个@deftech{集合}中的模块通过一个引号引用，无后缀路径。例如，下面的模块引用@filepath{date.rkt}库，它是部分@filepath{racket}@deftech{集合}的一部分：
 

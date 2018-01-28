@@ -9,7 +9,7 @@
                      setup/link
                      racket/date))
 
-@section[#:tag "link-collection"]{添加集合}
+@title[#:tag "link-collection"]{添加集合}
 
 回顾《@secref["module-org"]》部分的糖果排序示例，假设@filepath{db/}和@filepath{machine/}中的模块需要一组常见的助手函数集。辅助函数可以放在一个@filepath{utils/}目录，同时模块@filepath{db/}或@filepath{machine/}可以以开始于@filepath{../utils/}的相对路径访问公用模块。只要一组模块在一个项目中协同工作，最好保持相对路径。程序员可以在不知道你的Racket配置的情况下跟踪相关路径的引用。
 

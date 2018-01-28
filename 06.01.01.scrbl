@@ -8,7 +8,8 @@
           (for-label setup/dirs
                      setup/link
                      racket/date))
-@section[#:tag "module-org"]{组织模块}
+
+@title[#:tag "module-org"]{组织模块}
 
 @filepath{cake.rkt}和@filepath{random-cake.rkt}示例演示如何组织一个程序模块的最常用的方法：把所有的模块文件在一个目录（也许是子目录），然后有模块通过相对路径相互引用。模块目录可以作为一个项目，因为它可以在文件系统上移动或复制到其它机器上，而相对路径则保存模块之间的连接。
 

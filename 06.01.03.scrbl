@@ -9,7 +9,7 @@
                      setup/link
                      racket/date))
 
-@section[#:tag "packages-and-collections"]{包和集合}
+@title[#:tag "packages-and-collections"]{包和集合}
 
 一个@deftech{包（package）}是通过Racket包管理器安装的一组库（或者预先安装在Racket分发中）。例如，@racketmodname[racket/gui]库是由@filepath{gui}包提供的，而@racketmodname[parser-tools/lex]是由@filepath{parser-tools}库提供的。
 
