@@ -46,6 +46,7 @@ racket
 
 相对在导入@racket[(require "cake.rkt")]内的引用@racket["cake.rkt"]的运行来说，如果@filepath{cake.rkt}和@filepath{random-cake.rkt}模块在同一个目录里。UNIX样式的相对路径用于所有平台上的相对模块引用，就像HTML页面中的相对的URL一样。
 
+@;------------------------------------------------------------------
 @include-section["06.01.01.scrbl"]
 @include-section["06.01.02.scrbl"]
 @include-section["06.01.03.scrbl"]
