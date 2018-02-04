@@ -38,3 +38,5 @@ racket/base
 
 @;-----------------------------------------------------
 @include-section["07.01.01.scrbl"]
+@include-section["07.01.02.scrbl"]
+@include-section["07.01.03.scrbl"]
