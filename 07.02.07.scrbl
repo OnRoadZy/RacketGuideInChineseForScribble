@@ -10,7 +10,15 @@
           "utils.rkt"
           (for-label racket/contract))
 
-@ctc-section[#:tag "dissecting-contract-errors"]{解析合约的错误消息}
+@title[#:tag "dissecting-contract-errors"]{解析合约的错误消息}
+
+@(define str "huh?")
+
+@(begin
+   (set! str
+         (with-handlers ((exn:fail? exn-message))
+           (contract-eval '(deposit -10))))
+   "")
 
 @(define (lines a b)
    (define lines (regexp-split #rx"\n" str))
@@ -21,7 +29,7 @@
 一般来说，每个合约的错误信息由六部分组成：
 
 @itemize[
- @item{与合同有关的函数或方法的名称。而且“合同违约”或“违约”一词取决于合同是否违反了客户或在前一个示例中：@行[0 1]}
+ @item{与合同有关的函数或方法的名称。而且“合同违约”或“违约”一词取决于合同是否违反了客户或在前一个示例中：@lines[0 1]}
 
  @item{2、对违反合约的准确的哪一方面的描述，@lines[1 2]}
 

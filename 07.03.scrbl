@@ -19,3 +19,6 @@
 @include-section["07.03.04.scrbl"]
 @include-section["07.03.05.scrbl"]
 @include-section["07.03.06.scrbl"]
+@include-section["07.03.07.scrbl"]
+@include-section["07.03.08.scrbl"]
+@include-section["07.03.09.scrbl"]
