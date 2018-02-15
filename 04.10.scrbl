@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{引用：@racket[quote]和@racketvalfont{@literal{'}}}
+@title[#:tag "quote"]{引用：@racket[quote]和@racketvalfont{@literal{'}}}
 
 引用（@racket[quote]）表产生一个常数：
 

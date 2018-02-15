@@ -7,7 +7,7 @@
 
 @(define param-eval (make-base-eval))
 
-@title{动态绑定：@racket[parameterize]}
+@title[#:tag "parameterize"]{动态绑定：@racket[parameterize]}
 
 @racket[parameterize]表把一个新值和@racket[_body]表达式求值过程中的一个参数@deftech{parameter}相结合：
 

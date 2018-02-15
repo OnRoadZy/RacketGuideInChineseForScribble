@@ -7,7 +7,7 @@
 
 @(define def-eval (make-base-eval))
 
-@title{咖喱函数简写}
+@title[#:tag "curried-function-shorthand"]{咖喱函数简写}
 
 注意下面的@racket[make-add-suffix]函数接收一个字符串并返回另一个带字符串的函数：
 

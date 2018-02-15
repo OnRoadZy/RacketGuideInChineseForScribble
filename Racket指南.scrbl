@@ -14,8 +14,10 @@
 
 第2章简要介绍Racket语言。从第3章开始，本指南深入讨论了大部分的Racket语言工具箱，但把更清晰的细节内容留给Racket语言参考手册和其他参考手册介绍。
 
+@; ----------------------------------------
 @table-of-contents[]
 
+@; ----------------------------------------
 @include-section["01.scrbl"]
 @include-section["02.scrbl"]
 @include-section["03.scrbl"]
@@ -24,3 +26,44 @@
 @include-section["06.scrbl"]
 @include-section["07.scrbl"]
 @include-section["08.scrbl"]
+@include-section["09.scrbl"]
+
+@; --------------------------------------------------
+
+@(bibliography
+ 
+  (bib-entry #:key "Goldberg04"
+             #:author "David Goldberg, Robert Bruce Findler, and Matthew Flatt"
+             #:title "Super and Inner---Together at Last!"
+             #:location "Object-Oriented Programming, Languages, Systems, and Applications"
+             #:date "2004"
+             #:url "http://www.cs.utah.edu/plt/publications/oopsla04-gff.pdf")
+
+  (bib-entry #:key "Flatt02"
+             #:author "Matthew Flatt"
+             #:title "Composable and Compilable Macros: You Want it When?"
+             #:location "International Conference on Functional Programming"
+             #:date "2002")
+ 
+  (bib-entry #:key "Flatt06"
+             #:author "Matthew Flatt, Robert Bruce Findler, and Matthias Felleisen"
+             #:title "Scheme with Classes, Mixins, and Traits (invited tutorial)"
+             #:location "Asian Symposium on Programming Languages and Systems"
+             #:url "http://www.cs.utah.edu/plt/publications/aplas06-fff.pdf"
+             #:date "2006")
+ 
+ (bib-entry #:key "Mitchell02"
+            #:author "Richard Mitchell and Jim McKim"
+            #:title "Design by Contract, by Example"
+            #:is-book? #t
+            #:date "2002")
+
+ (bib-entry #:key "Sitaram05"
+            #:author "Dorai Sitaram"
+            #:title "pregexp: Portable Regular Expressions for Scheme and Common Lisp"
+            #:url "http://www.ccs.neu.edu/home/dorai/pregexp/"
+            #:date "2002")
+
+)
+
+@index-section[]

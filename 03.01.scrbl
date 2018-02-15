@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{布尔值（Boolean）}
+@title[#:tag "booleans"]{布尔值（Boolean）}
 
 Racket有表示布尔值的两个常数：@racket[#t]表示真，@racket[#f]表示假。大写的@racketvalfont{#T}和@racketvalfont{#F}在语法上描述为同样的值，但小写形式是首选。
 

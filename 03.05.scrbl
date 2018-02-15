@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{字符串（Unicode Strings）}
+@title[#:tag "bytestrings"]{字节（Byte）和字节字符串（Byte String）}
 
 @deftech{字节（byte）}是包含@racket[0]到@racket[255]之间的精确整数。@racket[byte?]判断表示字节的数字。
 

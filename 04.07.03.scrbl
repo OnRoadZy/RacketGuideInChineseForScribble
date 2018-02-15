@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{约束测试：cond}
+@title[#:tag "cond"]{约束测试：cond}
 
 @racket[cond]表链接了一系列的测试以选择一个表达式结果。一个最近似的情况，@racket[cond]语法如下：
 

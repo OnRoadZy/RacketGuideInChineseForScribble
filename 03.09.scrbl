@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{向量（Vector）}
+@title[#:tag "vectors"]{向量（Vector）}
 
 一个@deftech{向量（vector）}是任意值的固定长度数组。与列表不同，向量支持常量时间访问和元素更新。
 

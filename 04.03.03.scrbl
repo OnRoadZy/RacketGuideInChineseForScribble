@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{apply函数}
+@title[#:tag "apply"]{apply函数}
 
 函数调用的语法支持任意数量的参数，但是一个特定的调用总是指定一个固定数量的参数。因此，一个带参数列表的函数不能直接将一个类似于@racket[+]的函数应用到列表中的所有项中：
 

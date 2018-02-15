@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{if影响：@racket[when]和@racket[unless]}
+@title[#:tag "when+unless"]{if影响：@racket[when]和@racket[unless]}
 
 @racket[when]表将@racket[if]样式条件与“then”子句并且没有“else”子句的排序相结合：
  

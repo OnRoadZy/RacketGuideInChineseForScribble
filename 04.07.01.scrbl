@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{简单分支：@racket[if]}
+@title[#:tag "simple-branching-if"]{简单分支：@racket[if]}
 
 在@racket[if]表：
 

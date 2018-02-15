@@ -8,7 +8,7 @@
           (for-label racket/base
                      racket/contract))
 
-@title{混合@racket[set!]和@racket[contract-out]}
+@title[#:tag "mixing-set!-and-contract-out"]{混合@racket[set!]和@racket[contract-out]}
 
 合约库假定变量通过@racket[contract-out]导出没有被分配到，但没有强制执行。因此，如果您尝试@racket[set!]这些变量，你可能会感到惊讶。考虑下面的例子：
 

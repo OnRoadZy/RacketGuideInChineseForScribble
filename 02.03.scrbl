@@ -5,7 +5,7 @@
           "guide-utils.rkt"
           (for-label racket/list))
 
-@title{列表、迭代和递归}
+@title[#:tag "lists-iteration-recursion"]{列表、迭代和递归}
 
 Racket语言是Lisp的一种方言，名字来自于“LISt Processor”。内置的列表数据类型保持了这种语言的一个显著特征。
 

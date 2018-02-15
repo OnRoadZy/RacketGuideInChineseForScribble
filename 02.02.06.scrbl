@@ -12,7 +12,7 @@
             @kleenestar{@nonterm{expr}}
             @litchar{)}])
 
-@title{函数重复调用}
+@title[#:tag "function-calls-again"]{函数重复调用}
 
 在我们早期的函数语法调用，我们是过分简单化的。一个函数调用的语法允许任意的函数表达式，而不是一个@nonterm{ID}：
 

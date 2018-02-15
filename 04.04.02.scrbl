@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{声明可选（optional）参数}
+@title[#:tag "declaring-optional-arguments"]{声明可选（optional）参数}
 
 不只是标识符，一个@racket[lambda]表的参数（不仅是剩余参数）可以用标识符和缺省值指定：
 

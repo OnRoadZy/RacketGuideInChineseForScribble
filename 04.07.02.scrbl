@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{组合测试：@racket[and]和@racket[or]}
+@title[#:tag "and+or"]{组合测试：@racket[and]和@racket[or]}
 
 Racket的@racket[and]和@racket[or]是语法表，而不是函数。不像一个函数，如果前边的一个求值确定了答案，@racket[and]和@racket[or]表会忽略后边的表达式求值。
 

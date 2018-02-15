@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{函数调用）@aux-elem{（过程程序）}}
+@title[#:tag "application"]{函数调用）@aux-elem{（过程程序）}}
 
 一个表表达式：
 

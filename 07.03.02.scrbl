@@ -8,7 +8,7 @@
                      racket/contract
                      racket/gui))
 
-@title[#:tag "rest-args"]{剩余参数}
+@title[#:tag "rest-args-argument"]{剩余参数}
 
 @racket[max]操作符至少接受一个实数，但它接受任意数量的附加参数。您可以使用@tech{剩余参数（rest argument）}编写其它此类函数，例如在@racket[max-abs]中：
 

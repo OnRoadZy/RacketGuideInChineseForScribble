@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{后置影响：@racket[begin0]}
+@title[#:tag "effects-after-begin0"]{后置影响：@racket[begin0]}
 
 一个@racket[begin0]表达式与有一个@racket[begin]表达式有相同的语法：
 

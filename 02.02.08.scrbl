@@ -39,7 +39,7 @@
     @litchar{let}))
 
 
-@title{用@racket[define]、@racket[let]和@racket[let*]实现局部绑定}
+@title[#:tag "local-binding-intro"]{用@racket[define]、@racket[let]和@racket[let*]实现局部绑定}
 
 现在是收起我们的Racket语法的另一个简化的时候了。在函数体中，定义可以出现在函数体表达式之前：
 

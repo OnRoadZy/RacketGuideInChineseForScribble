@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{符号（Symbol）}
+@title[#:tag "symbols"]{符号（Symbol）}
 
 @deftech{符号（symbol）}是一个原子值，它像前面的标识符那样以@litchar{'}前缀打印。一个表达式以@litchar{'}开始并以标识符继续表达式产生一个符号值。
 

@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{内置的数据类型}
+@title[#:tag "datatypes" #:style 'toc]{内置的数据类型}
 
 @seclink["02"]{上一章}介绍了Racket的内置数据类型：数字、布尔值、字符串、列表、和程序。本节提供了简单的数据表的内置数据表更完整的覆盖。
 

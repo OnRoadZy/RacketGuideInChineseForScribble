@@ -7,7 +7,7 @@
 
 @;(define piece-eval (make-base-eval))
 
-@title{与Racket语言交互}
+@title[#:tag "interacting-with-racket"]{与Racket语言交互}
 DrRacket底部的文本区和@exec{racket}的命令行程序（启动时没有选择）作为一种计算器。你打出一个racket的表达式，按下回车键，答案就打印出来了。在Racket的术语里，这种计算器叫做@idefterm{读取求值打印（read-eval-print）}循环或@deftech{REPL}。
 
 一个数字本身就是一个表达式，而答案就是数字：

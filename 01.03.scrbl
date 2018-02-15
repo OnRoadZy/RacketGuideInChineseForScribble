@@ -1,3 +1,4 @@
+;01.03.scrbl
 ;1.3 创建可执行文件
 #lang scribble/doc
 @(require scribble/manual scribble/eval scribble/bnf "guide-utils.rkt"
@@ -6,9 +7,9 @@
 
 @(define piece-eval (make-base-eval))
 
-@title{创建可执行文件}
+@title[#:tag "creating-executables"]{创建可执行文件}
 
-如果你的文件（或在DrRacket的定义区域）包含：
+如果你的文件（或在DrRacket的@tech{定义区域}）包含：
 
 @racketmod[
             racket

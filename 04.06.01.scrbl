@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{平行绑定：let}
+@title[#:tag "parallel-binding-let"]{平行绑定：let}
 
 一个@racket[let]表绑定一组标识符，每个标识符都是某个表达式的结果，用于@racket[let]主体：
 

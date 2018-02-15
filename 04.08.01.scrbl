@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{前置影响：@racket[begin]}
+@title[#:tag "effects-before-begin"]{前置影响：@racket[begin]}
 
 一个@racket[begin]表达式排序表达式：
 

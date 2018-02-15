@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{使用赋值的指导原则}
+@title[#:tag "using-set!"]{使用赋值的指导原则}
 
 虽然使用@racket[set!]有时是适当的，Racket风格通常建议不使用@racket[set!]。下面的准则有助于解释什么时候使用@racket[set!]是适当的。
 

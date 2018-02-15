@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{多值赋值：@racket[set!-values]}
+@title[#:tag "multiple-values-set!-values"]{多值赋值：@racket[set!-values]}
 
 @racket[set!-values]表一次赋值给多个变量，给出一个生成适当的数值的表达式：
  

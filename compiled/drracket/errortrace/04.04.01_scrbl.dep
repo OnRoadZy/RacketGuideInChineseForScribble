@@ -1,0 +1,1 @@
+("6.12" ("2b412666aa94f2c27a7749feeb079b56013dc443" . "5a3c928807c99a2af04cfec7131fe096ba995cdf") #"/home/zhy/RacketProg/RacketGuideInChineseForScribble/guide-utils.rkt" (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"doc" #"lang" #"reader.rkt") (collects #"scribble" #"doclang.rkt") (collects #"scribble" #"eval.rkt") (collects #"scribble" #"manual.rkt"))

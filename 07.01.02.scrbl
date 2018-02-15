@@ -7,7 +7,7 @@
           (for-label racket/base
                      racket/contract))
 
-@title{合约与模块的测试}
+@title[#:tag "experimenting-with-contracts-and-modules"]{合约与模块的测试}
 
 在这一章中的所有合同和模块（不包括那些只是跟随）是使用标准的@tt{#lang}语法描述的模块。由于模块是合约中各方之间的边界，所以示例涉及多个模块。
 

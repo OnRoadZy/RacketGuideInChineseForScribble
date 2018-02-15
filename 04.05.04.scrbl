@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{内部定义}
+@title[#:tag "intdefs"]{内部定义}
 
 当句法表的语法指定@racket[_body]，那相应的表可以是定义或表达式。作为一个@racket[_body]的定义是一个内部定义@defterm{internal definition}。
 

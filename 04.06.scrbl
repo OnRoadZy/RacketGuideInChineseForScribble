@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{局部绑定}
+@title[#:tag "let"]{局部绑定}
 
 虽然内部@racket[define]可用于局部绑定，Racket提供了三种形式给予程序员在绑定方面的更多控制：@racket[let]、@racket[let*]和@racket[letrec]。
 

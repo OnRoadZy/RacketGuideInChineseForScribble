@@ -10,7 +10,7 @@
           "utils.rkt"
           (for-label racket/contract))
 
-@title{7.2.3 and和any/c}
+@title[#:tag "any-and-anyc"]{7.2.3 and和any/c}
 
 用于@racket[deposit]的@racket[any]合约符合任何结果，只能在函数合约的范围内使用。代替上面的@racket[any]，我们可以使用更具体的合约@racket[void?]，它表示函数总是返回@racket[(void)]值。然而，@racket[void?]合约要求合约监控系统每次调用函数时都要检查返回值，即使“客户机”模块不能很好地处理这个值。相反，@racket[any]告诉监控系统不检查返回值，它告诉潜在客户机，“服务器”模块对函数的返回值不作任何承诺，甚至不管它是单个值或多个值。
 

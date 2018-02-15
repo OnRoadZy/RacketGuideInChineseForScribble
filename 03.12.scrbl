@@ -7,7 +7,7 @@
           (for-label racket/undefined
                      racket/shared))
 
-@title{空值（Void）和未定义值（Undefined）}
+@title[#:tag "void+undefined"]{空值（Void）和未定义值（Undefined）}
 
 某些过程或表达式形式不需要结果值。例如，@racket[display]程序仅调用输出的副作用。在这样的情况下，得到的值通常是一个特殊的常量，打印为@|void-const|。当一个表达式的结果是简单的@|void-const|，@tech{REPL}不打印任何东西。
 

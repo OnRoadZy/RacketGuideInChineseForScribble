@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{相继绑定：let*}
+@title[#:tag "sequential-binding-let"]{相继绑定：let*}
 
 @racket[let*]的语法和@racket[let]的一样：
 

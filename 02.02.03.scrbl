@@ -6,7 +6,7 @@
           scribble/bnf
           "guide-utils.rkt")
 
-@title{标识符}
+@title[#:tag "identifiers"]{标识符}
 
 Racket的标识符语法特别自由。不含特殊字符。
 

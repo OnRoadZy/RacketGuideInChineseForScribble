@@ -9,7 +9,7 @@
 
 @(define posn-eval (make-base-eval))
 
-@title{简单的结构类型：struct}
+@title[#:tag "simple-structure-types-struct"]{简单的结构类型：struct}
 
 一个最接近的，@racket[struct]的语法是
 

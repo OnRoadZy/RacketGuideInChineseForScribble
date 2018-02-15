@@ -6,7 +6,7 @@
 
 @(define piece-eval (make-base-eval))
 
-@title{给有LISP/Scheme经验的读者的一个说明}
+@title[#:tag "use-module"]{给有LISP/Scheme经验的读者的一个说明}
 
 如果你已经知道一些关于Scheme或Lisp的东西，你可能会试图这样将
 

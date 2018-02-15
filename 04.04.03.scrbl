@@ -7,7 +7,7 @@
 
 @(define greet-eval (make-base-eval))
 
-@title{声明关键字（keyword）参数}
+@title[#:tag "lambda-keywords"]{声明关键字（keyword）参数}
 
 一个@racket[lambda]表可以声明要通过关键字传递的参数，而不是位置。关键字参数可以与位置参数混合，也可以为两种参数提供默认值表达式：
 

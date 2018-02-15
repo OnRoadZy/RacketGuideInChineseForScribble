@@ -7,7 +7,7 @@
           "guide-utils.rkt"
           (for-label racket/dict racket/serialize))
 
-@title{结构类型的生成性}
+@title[#:tag "structure-type-generativity"]{结构类型的生成性}
 
 每次对一个@racket[struct]表求值时，它就生成一个与所有现有结构类型不同的结构类型，即使某些其他结构类型具有相同的名称和字段。
 

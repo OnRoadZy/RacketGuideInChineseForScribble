@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{申明剩余（rest）参数}
+@title[#:tag "rest-args"]{申明剩余（rest）参数}
 
 一个@racket[lambda]表达式也可以有这种形式：
 

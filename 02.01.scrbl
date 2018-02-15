@@ -4,7 +4,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{简单的值}
+@title[#:tag "simple-values"]{简单的值}
 
 Racket值包括数字、布尔值、字符串和字节字符串。DrRacket和文档示例中(当你在着色状态下阅读文档时)，值表达式显示为绿色。
 

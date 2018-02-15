@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{数值（Number）}
+@title[#:tag "numbers"]{数值（Number）}
 
 Racket的@deftech{数值（number）}可以是精确的也可以是不精确的：
 

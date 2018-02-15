@@ -10,7 +10,7 @@
           "utils.rkt"
           (for-label racket/contract))
 
-@title{合约的高阶函数}
+@title[#:tag "contracts-on-higher-order-functions"]{合约的高阶函数}
 
 函数合约不仅仅局限于域或范围上的简单断言。在这里论述的任何合约组合，包括函数合约本身，可作为一个函数的参数和结果的合约。
 

@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{递归绑定：letrec}
+@title[#:tag "recursive-binding-letrec"]{递归绑定：letrec}
 
 @racket[letrec]的语法也和@racket[let]相同：
 

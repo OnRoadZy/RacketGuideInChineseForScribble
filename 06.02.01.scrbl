@@ -8,7 +8,7 @@
 
 @(define cake-eval (make-base-eval))
 
-@title[#:tag "module-syntax"]{@racket[module]表}
+@title[#:tag "module-form"]{@racket[module]表}
 
 一个模块声明的普通写法形式，既可在@tech{REPL}又可在一个文件中执行的是
 

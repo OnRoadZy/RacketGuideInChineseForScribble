@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{简单分派：@racket[case]}
+@title[#:tag "case"]{简单分派：@racket[case]}
 
 通过将表达式的结果与子句的值相匹配，@racket[case]表分派一个子句：
 

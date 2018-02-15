@@ -7,7 +7,7 @@
 
 @(define piece-eval (make-base-eval))
 
-@title{定义和交互}
+@title[#:tag "definitions-and-interactions"]{定义和交互}
 
 你可以通过使用@racket[define]表像@racket[substring]那样定义自己的函数，像这样：
 
@@ -27,7 +27,7 @@ code:blank
  (define (extract str)
    (substring str 4 7))]
 
-如果调用@racket[(extract "the boy")]是程序的主要行为的一部分，那么它也将进入@deftech{定义区域（definitions area）}。但如果这只是一个例子，你用来测试@racket[extract]，那么你会更容易如上面那样离开定义区域，点击@onscreen{运行（Run）}，然后将在@tech{REPL}中求值@racket[(extract "the boy")]。
+如果调用@racket[(extract "the boy")]是程序的主要行为的一部分，那么它也将进入@tech{定义区域}。但如果这只是一个例子，你用来测试@racket[extract]，那么你会更容易如上面那样离开定义区域，点击@onscreen{运行（Run）}，然后将在@tech{REPL}中求值@racket[(extract "the boy")]。
 
 当使用命令行的@exec{racket}代替DrRacket，你会在一个文件中用你喜欢的编辑器保存上面的文本。如果你将它保存为@filepath{extract.rkt}，然后在同一目录开始@exec{racket}，你会对以下序列求值：
 

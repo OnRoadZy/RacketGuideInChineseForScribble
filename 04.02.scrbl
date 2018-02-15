@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{标识符和绑定}
+@title[#:tag "binding"]{标识符和绑定}
 
 表达式的上下文决定表达式中出现的标识符的含义。特别是，用语言@racketmodname[racket]开始一个模块时，如：
 

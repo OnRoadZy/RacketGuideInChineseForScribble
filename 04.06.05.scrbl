@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{多值绑定：let-values，let*-values，letrec-values}
+@title[#:tag "multiple-values-let-values"]{多值绑定：let-values，let*-values，letrec-values}
 
 以@racket[define-values]同样的方式绑定定义的多个结果（见《多值和define-values》）（@secref["multiple-values"]），@racket[let-values]、@racket[let*-values]和@racket[letrec-values]值绑定多个局部结果。
 

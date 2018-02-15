@@ -10,7 +10,7 @@
 @(define ex-eval (make-base-eval))
 @(ex-eval '(require racket/contract))
 
-@title{建立新合约}
+@title[#:tag "building-new-contracts"]{建立新合约}
 
 合约在内部表现为函数，它接受合约的信息（归咎于谁，源程序位置,《@|etc|》），并以合约的名义产生（Dana Scott精神）的推断。
 
@@ -135,7 +135,7 @@ integer?)]可以这样写：
 
 最后一个问题仍然是这个合约可以与合约系统的其它部分一起使用。在上面的函数中，通过为@racket[f]创建一个包装函数来实现这个合约，但是这个包装器函数与@racket[equal?]不协作，它也不让运行时系统知道结果函数与输入函数@racket[f]之间的关系。
 
-为了解决这两个问题，我们应该使用@tech[#:doc '(lib "scribblings/reference/reference.scrbl")]{陪护（chaperones）}而不是仅仅使用@racket[λ]创建包装函数。这里是@racket[int->int-proj]函数被重写以使用陪护：
+为了解决这两个问题，我们应该使用@tech[#:doc '(lib "scribblings/reference/reference.scrbl")]{陪护（chaperones）}而不是仅仅使用@racket[λ]创建包装函数。这里是@racket[int->int-proj]函数被重写以使用@tech[#:doc '(lib "scribblings/reference/reference.scrbl")]{陪护（chaperone）}：
 
 @interaction/no-prompt[#:eval ex-eval
 (define (int->int-proj blame)
@@ -185,7 +185,7 @@ integer?)]可以这样写：
          (f #f)
          (f 1)]
 
-@;----------------------------------------------------------
+@; ----------------------------------------------------------
 @section{合约结构属性}
 
 对于一次性合约来说，@racket[make-chaperone-contract]函数是可以的，但通常你想做许多不同的合约，只在某些部分有所不同。做到这一点的最好方法是使用一个@racket[struct]（结构），带@racket[prop:contract]、@racket[prop:chaperone-contract]或@racket[prop:flat-contract]。
@@ -250,6 +250,7 @@ integer?)]可以这样写：
          (f #f)
          (f 1)]
 
+@; ---------------------------------------------------------------
 @section{所有的警告和报警}
 
 合约中有一些可选部分，@racket[simple-arrow-contract]没有添加。在这一节中，我们将通过所有这些步骤来演示如何实现这些示例。
@@ -264,7 +265,6 @@ integer?)]可以这样写：
 它接受一个值并返回@racket[#f]，如果这个值确实不满足合同，并且如返回@racket[#t]，只要我们能够辨别这个值满足合约，就正是这个值的一阶属性检查。
 
 下一个是随机的生成。合约库中的随机生成分为两部分：随机运用满足合约值的能力和与应用与给定合约相匹配的值的能力，希望发现其中的错误（并试图使它们生成在生成期间在其他地方使用的有趣值）。
-
 
 为了运用合约，我们需要实现一个赋予@racket[arrow-contract]结构和一些辅助函数。它应该返回两个值：一个函数，它接受合约值并运用它们；外加一个值列表，这个运用过程总会产生。对于我们简单的合约，我们知道我们总能产生值域的值，只要我们可以生成定义域的值（因为我们可以调用函数）。因此，这里有一个函数，它与@racket[build-chaperone-contract-property]合约的@racket[_exercise]参数相匹配：
 
@@ -288,7 +288,7 @@ integer?)]可以这样写：
 
 如果定义域合约可以产生，那么我们知道我们可以通过运用来做一些好的事。在这种情况下，我们返回一个过程，它用我们从定义域生成的东西调用@racket[_f]（这个函数与合约匹配），而且我们也将结果值保存在环境中。我们也返回@racket[(simple-arrow-rng arr)]表明运用总是会产生合约的东西。
 
-如果不能，那么我们只简单地返回一个函数，它不运用(@racket[void])和空列表（表示我们不会生成任何值）。
+如果不能，那么我们只简单地返回一个函数，它不运用@racket[(void)]和空列表（表示我们不会生成任何值）。
 
 然后，为了生成与合约相匹配的值，我们定义了一个函数，当给定合约和辅助函数时，它构成一个随机函数。为了帮助它成为一个更有效的测试函数，我们可以运用它接受的任何参数，并也将它们保存到生成环境中，但前提是我们可以生成值域合约的值。
 
@@ -346,11 +346,7 @@ integer?)]可以这样写：
 
 @interaction[#:eval ex-eval (simple-arrow-contract integer? integer?)]
 
-（我们使用@racket[prop:custom-write]，因为合约库不能依赖于
-
-@racketmod[racket/generic]
-
-但仍然希望提供一些帮助，以便于使用正确的打印机。）
+（我们使用@racket[prop:custom-write]，因为合约库不能依赖于@racketmod[racket/generic]但仍然希望提供一些帮助，以便于使用正确的打印机。）
 
 既然那些已经完成，我们就可以使用新功能。这里是一个随机函数，它由合约库生成，使用我们的@racket[simple-arrow-contract-generate]函数：
 

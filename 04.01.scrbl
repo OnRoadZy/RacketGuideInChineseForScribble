@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{标记法}
+@title[#:tag "syntax-notation"]{标记法}
 
 这一章（和其余的文档）使用了一个稍微不同的标记法，而不是基于字符的《Racket语言概要》（@secref["to-scheme"]）章节语法。使用语法表@racketkeywordfont{something}的语法如下所示：
 

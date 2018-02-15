@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{关键字（Keyword）}
+@title[#:tag "keywords"]{关键字（Keyword）}
 
 一个@deftech{关键字（keyword）}值类似于一个符号（见《符号（Symbols）》（@secref["symbols"]）），但它的打印形式是用前缀@litchar{#:}。
 

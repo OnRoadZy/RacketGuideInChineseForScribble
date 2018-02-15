@@ -32,7 +32,7 @@
                                    @litchar{]}]}
             @litchar{)}])
 
-@title{条件表达式@racket[if]、@racket[and]、@racket[or]和@racket[cond]}
+@title[#:tag "if-and-or-cond"]{条件表达式@racket[if]、@racket[and]、@racket[or]和@racket[cond]}
 
 以下是一个最简单的表达式是@racket[if]条件：
 

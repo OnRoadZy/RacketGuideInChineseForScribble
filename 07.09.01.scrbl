@@ -8,7 +8,7 @@
           (for-label racket/base
                      racket/contract))
 
-@title{合约和@racket[eq?]}
+@title[#:tag "contracts-and-eq"]{合约和@racket[eq?]}
 
 一般来说，在程序中添加一个合约既应该使程序的行为保持不变，也应该表明违反合约的行为。这几乎是真正的Racket合约，只有一个例外：@racket[eq?]。
 

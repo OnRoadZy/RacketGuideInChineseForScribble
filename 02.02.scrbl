@@ -6,7 +6,7 @@
           scribble/bnf
           "guide-utils.rkt")
 
-@title{简单的定义与表达式}
+@title[#:tag "syntax-overview"]{简单的定义与表达式}
 
 一个程序模块一般被写作：
 

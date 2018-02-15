@@ -8,7 +8,7 @@
                      racket/contract
                      racket/gui))
 
-@title[#:tag "keywords"]{关键字参数}
+@title[#:tag "keywords-argument"]{关键字参数}
 
 原来@racket[->]合约构造函数也包含对关键字参数的支持。例如，考虑这个函数，它创建一个简单的GUI并向用户询问一个“yes-or-no”的问题：
 

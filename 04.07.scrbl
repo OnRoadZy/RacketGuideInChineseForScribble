@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{条件分支}
+@title[#:tag "conditionals"]{条件分支}
 
 大多数函数都可用于分支，如@racket[<]和@racket[string?]，结果要么产生@racket[#t]要么产生@racket[#f]。Racket的分支表，无论什么情况，对待任何非@racket[#f]值为真。我们说一个@defterm{真值（true value）}意味着其它为任何非@racket[#f]值。
 

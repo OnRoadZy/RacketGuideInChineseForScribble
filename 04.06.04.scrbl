@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{命名let}
+@title[#:tag "named-let"]{命名let}
 
 命名@racket[let]是一个迭代和递归表。它使用与局部绑定相同的语法关键字@racket[let]，但在@racket[let]之后的标识符（而不是一个括号）触发不同的解析。
 

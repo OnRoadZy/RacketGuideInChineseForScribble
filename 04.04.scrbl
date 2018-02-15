@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{lambda函数（程序）}
+@title[#:tag "lambda"]{lambda函数（程序）}
 
 @racket[lambda]表达式创建函数。在最简单的情况，@racket[lambda]表达式具有的形式：
 
@@ -24,3 +24,12 @@
 ((lambda (x y) (+ x y))
  1)
 ]
+
+@; -----------------------------------------------
+@include-section["04.04.01.scrbl"]
+@include-section["04.04.02.scrbl"]
+@include-section["04.04.03.scrbl"]
+@include-section["04.04.04.scrbl"]
+
+@; ----------------------------------------------------------------------
+@;close-eval[greet-eval]

@@ -10,7 +10,7 @@
           "utils.rkt"
           (for-label racket/contract))
 
-@title{ @racket[->]类型}
+@title[#:tag "styles-of->"]{ @racket[->]类型}
 
 如果你已经习惯了数学函数，你可以选择一个合约箭头出现在函数的域和范围内，而不是在开头。如果你已经读过《如何设计程序》（@|HtDP|），你已经见过这个很多次了。事实上，你可能在其他人的代码中见过这样的合约：
 

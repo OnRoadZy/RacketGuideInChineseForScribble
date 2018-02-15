@@ -7,7 +7,7 @@
 
 @(define def-eval (make-base-eval))
 
-@title{定义：@racket[define]}
+@title[#:tag "define"]{定义：@racket[define]}
 
 基本定义具为如下形式：
 
@@ -21,7 +21,11 @@
 salutation
 ]
 
+@; ---------------------------------------------------------------------
 @include-section["04.05.01.scrbl"]
 @include-section["04.05.02.scrbl"]
 @include-section["04.05.03.scrbl"]
 @include-section["04.05.04.scrbl"]
+
+@; ----------------------------------------------------------------------
+@close-eval[def-eval]

@@ -16,7 +16,7 @@
             @kleeneplus{@nonterm{expr}}
             @litchar{)}])
 
-@title{匿名函数与@racket[lambda]}
+@title[#:tag "anonymous-functions"]{匿名函数与@racket[lambda]}
 
 如果你必须命名你所有的数值，那Racket的编程就太乏味了。替换@racket[(+ 1 2)]的写法，你得这样写：
 

@@ -14,7 +14,7 @@
    @BNF-seq[@litchar{(}@litchar{define} @litchar{(} @nonterm{id} @kleenestar{@nonterm{id}} @litchar{)}
                   @kleeneplus{@nonterm{expr}} @litchar{)}])
 
-@title{定义}
+@title[#:tag "definitions"]{定义}
 
 表的定义：
 

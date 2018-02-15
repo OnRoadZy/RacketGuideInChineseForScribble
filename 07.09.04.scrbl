@@ -8,7 +8,7 @@
           (for-label racket/base
                      racket/contract))
 
-@title{定义递归合约}
+@title[#:tag "defining-recursive-contracts"]{定义递归合约}
 
 定义自参考合约时，很自然地去使用@racket[define]。例如，人们可能试图在这样的流上写一份合约：
 

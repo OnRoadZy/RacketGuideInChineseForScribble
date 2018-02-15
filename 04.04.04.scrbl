@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{多解函数：case-lambda}
+@title[#:tag "case-lambda"]{多解函数：case-lambda}
 
 @racket[case-lambda]表创建一个函数，该函数可以根据所提供的参数的数量具有完全不同的行为。一个case-lambda表达式有以下形式：
 

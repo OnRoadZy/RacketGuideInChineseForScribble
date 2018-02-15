@@ -7,7 +7,7 @@
 
 @(define def-eval (make-base-eval))
 
-@title{多值和define-values}
+@title[#:tag "multiple-values"]{多值和define-values}
 
 Racket表达式通常产生一个单独的结果，但有些表达式可以产生多个结果。例如，@racket[quotient]（商）和@racket[remainder]（余数）各自产生一个值，但@racket[quotient/remainder]同时产生相同的两个值：
 

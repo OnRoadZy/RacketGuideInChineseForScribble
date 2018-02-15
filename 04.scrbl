@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{表达式和定义}
+@title[#:tag "scheme-forms" #:style 'toc]{表达式和定义}
 
 《Racket语言概要》（@secref["to-scheme"]）这一章介绍了一些基本的Racket的句法形式：定义、程序、条件表达式等。本节提供这些形式的更详细的信息，以及一些附加的基本形式。
 

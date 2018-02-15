@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{哈希表（Hash Table）}
+@title[#:tag "hash-tables"]{哈希表（Hash Table）}
 
 一个@deftech{哈希表（hash table）}实现了从键到值的映射，其中键和值可以是任意的Racket值，而对表的访问和更新通常是常量时间操作。键的比较用@racket[equal?]、@racket[eqv?]或@racket[eq?]，取决于哈希表的键创建方式为@racket[make-hash]、@racket[make-hasheqv]或@racket[make-hasheq]。
 

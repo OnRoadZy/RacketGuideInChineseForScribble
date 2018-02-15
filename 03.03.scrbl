@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{字符（Character）}
+@title[#:tag "characters"]{字符（Character）}
 
 Racket @deftech{字符（character）}对应于Unicode@defterm{标量值（scalar
 value）}。粗略地说，一个标量值是一个无符号整数，它的表示适合21位，并且映射到某种自然语言字符或字符块的某些概念。从技术上讲，标量值是比Unicode标准中的“字符”概念更简单的概念，但它是一种用于许多目的的近似值。例如，任何重音罗马字母都可以表示为一个标量值，就像任何普通的汉字一样。

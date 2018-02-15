@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{关键字参数}
+@title[#:tag "keyword-args"]{关键字参数}
 
 除了通过位置参数外，有些函数接受@defterm{关键字参数（keyword arguments）}。因此，@racket[_arg]可以是一个@racket[_arg-keyword _arg-expr]序列而不只是一个@racket[_arg-expr]：
 

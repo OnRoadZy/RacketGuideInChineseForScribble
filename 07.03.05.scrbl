@@ -8,7 +8,7 @@
                      racket/contract
                      racket/gui))
 
-@title[#:tag "case-lambda"]{case-lambda合约}
+@title[#:tag "case-lambda-contract"]{case-lambda合约}
 
 用@racket[case-lambda]定义的函数可能对其参数施加不同的约束，这取决于其提供了多少。例如，@racket[report-cost]函数可以将一对数字或字符串转换为一个新字符串：
 

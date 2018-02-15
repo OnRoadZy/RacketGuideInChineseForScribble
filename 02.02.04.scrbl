@@ -13,7 +13,7 @@
              @nonterm{expr}}
             @litchar{)}])
 
-@title{函数调用(过程应用程序)}
+@title[#:tag "function-calls"]{函数调用(过程应用程序)}
 
 我们已经看到过许多函数调用，更传统的术语称之为@defterm{过程应用程序}。函数调用的语法是：
 

@@ -5,7 +5,7 @@
           scribble/eval
           "guide-utils.rkt")
 
-@title{配对（Pair）和列表（List）}
+@title[#:tag "pairs"]{配对（Pair）和列表（List）}
 
 一个@deftech{配对（pair）}把两个任意值结合。@racket[cons]过程构建配对，@racket[car]和@racket[cdr]过程分别提取配对的第一和第二个成员。@racket[pair?]判断确认配对。
 

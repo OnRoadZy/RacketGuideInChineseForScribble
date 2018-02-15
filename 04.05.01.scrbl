@@ -7,7 +7,7 @@
 
 @(define def-eval (make-base-eval))
 
-@title{函数简写}
+@title[#:tag "function-shorthand"]{函数简写}
 
 @racket[定义（define）]表还支持函数定义的简写：
 

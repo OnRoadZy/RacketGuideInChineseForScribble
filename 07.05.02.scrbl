@@ -7,7 +7,7 @@
           "utils.rkt"
           (for-label racket/contract))
 
-@title[#:tag "define-struct"]{对所有值的确保}
+@title[#:tag "guarantees-for-all-values"]{对所有值的确保}
 
 这《如何设计程序》（ @|HtDP|）本书教授了@racket[posn]应该只包含在它们两个字段里的数值。有了合约，我们将执行以下非正式数据定义：
 
