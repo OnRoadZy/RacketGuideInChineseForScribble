@@ -48,7 +48,7 @@ y)]是从用户提供的文件中读取，然后@racket[eval]可能是适当的�
 一样地，在整个模块中@racket[eval]往往直接或间接地使用。例如，程序可以在定义域中用@racket[dynamic-require]读取一个模块，这基本上是一个封装在@racket[eval]中的动态加载模块的代码。
 
 @; 15.1.1 本地域---------------------------------------------
-@subsection{本地域}
+@subsection[#:tag "Local-Scopes"]{本地域}
 
 @racket[eval]函数不能看到上下文中被调用的局部绑定。例如，调用在一个非引用的@racket[let]表中的@racket[eval]以对一个公式求值不会使得值@racket[x]和@racket[y]可见：
 
@@ -107,7 +107,7 @@ racket
  @racket[make-base-namespace]函数创建一个命名空间，该命名空间是用@racket[racket/base]导出初始化的。后一部分《@secref["mk-namespace"]》提供了关于创建和配置名称空间的更多信息。
 
 @; 15.1.3 命名空间和模块--------------------------------------------------------
-@subsection{命名空间和模块}
+@subsection[#:tag "Namespaces-and-Modules"]{命名空间和模块}
 
 为@racket[let]绑定，词法范围意味着@racket[eval]不能自动看到一个调用它的@racket[module]（模块）的定义。然而，和@racket[let]绑定不同的是，Racket提供了一种将模块反射到一个@tech{namespace（命名空间）}的方法。
 
@@ -154,7 +154,7 @@ racket
 从核心Racket运行系统的角度来看，所有求值都是反射性的。执行从初始的命名空间包含一些原始的模块，并进一步由命令行上或在@tech{REPL}提供指定加载的文件和模块。顶层@racket[require]表和@racket[define]表调整标识符映射，模块声明（通常根据@racket[require]表加载）调整模块映射。
 
 @; 15.2.1 创建和安装命名空间----------------------------------------------------------
-@subsection{创建和安装命名空间}
+@subsection[#:tag "Creating-and-Installing-Namespaces"]{创建和安装命名空间}
 
 函数@racket[make-empty-namespace]创建一个新的空命名空间。由于命名空间确实是空的，所以它不能首先用来求值任何顶级表达式——甚至不能求值@racket[(require racket)]。特别地,
 
@@ -185,7 +185,7 @@ racket
 '(require my-dsl))]运行。上面的比较好，不仅仅是因为它更紧凑，还因为它避免引入不属于特定领域语言的绑定。
 
 @; 15.2.2 共享数据和代码的命名空间--------------------------------------------------
-@subsection{共享数据和代码的命名空间}
+@subsection[#:tag "Sharing-Data-and-Code-Across-Namespaces"]{共享数据和代码的命名空间}
 
 如果不需要对新命名空间附加的模块，则将重新加载并实例化它们。例如，@racketmodname[racket/base]不包括@racketmodname[racket/class]，加载@racketmodname[racket/class]又将创造一个不同的类数据类型：
 

@@ -181,7 +181,7 @@
 @racket[class]表的完整语法允许程序员为类成员指定不同的内部和外部名称。由于内部名称是本地的，因此可以重命名它们，以避免覆盖或冲突。这样的改名不总是必要的，但重命名缺乏的解决方法可以是特别繁琐。
 
 @;13.4 接口（Interface）-------------------------------------------------
-@section{接口（Interface）}
+@section[#:tag "Interfaces"]{接口（Interface）}
 
 接口对于检查一个对象或一个类实现一组具有特定（隐含）行为的方法非常有用。接口的这种使用有帮助的，即使没有静态类型系统（那是java有接口的主要原因）。
 
@@ -261,7 +261,7 @@ Racket中的接口通过使用@racket[interface]表创建，它只声明需要�
 成员键值主要用于@racket[define-member-name]表。通常，@racket[(member-name-key id)]捕获@racket[id]的方法键，以便它可以在不同的范围内传递到@racket[define-member-name]的使用。这种能力证明推广混合是有用的，作为接下来的讨论。
 
 @; 13.7 混合（mixin）------------------------------------------------------
-@section{混合（mixin）}
+@section[#:tag "Mixins"]{混合（mixin）}
 
 因为@racket[class]（类）是一种表达表，而不是如同在Smalltalk和java里的一个顶级的声明，一个@racket[class]表可以嵌套在任何词法范围内，包括lambda（λ）。其结果是一个@deftech{混合（mixin）}，即，一个类的扩展，是相对于它的基类的参数化。
 
@@ -310,7 +310,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 最后，对类成员的外部名称的使用（而不是词法作用域标识符）使得混合使用很方便。添加@racket[picky-mixin]到@racket[person%]运行，因为这个名字@racket[eat]和@racket[grow]匹配，在@racket[fish%]和@racket[person%]里没有任何@racket[eat]和@racket[grow]的优先申明可以是同样的方法。当成员名称意外碰撞后，此特性是一个潜在的缺陷；一些意外冲突可以通过限制外部名称作用域来纠正，就像在《@secref["extnames"]（Controlling the Scope of External Names）》所讨论的那样。
 
 @; 13.7.1 混合和接口--------------------------------------------------------------
-@subsection{混合和接口}
+@subsection[#:tag "Mixins-and-Interfaces"]{混合和接口}
 
 使用@racket[implementation?]，@racket[picky-mixin]可以要求其基类实现@racket[grower-interface]，这可以是由@racket[fish%]和@racket[person%]实现：
 
@@ -335,8 +335,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 ]
 
 @; 13.7.2 mixin表--------------------------------------------------
-@subsection{The @racket[mixin]表}
-
+@subsection[#:tag "The-mixin-Form"]{The @racket[mixin]表}
 
 为执行混合而编纂@racket[lambda]加@racket[class]模式，包括对混合的定义域和值域接口的使用，类系统提供了一个@racket[mixin]宏：
 
@@ -406,7 +405,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 ]
 
 @; 13.8 特征（trait）----------------------------------------------------------
-@section{特征（trait）}
+@section[#:tag "Traits"]{特征（trait）}
 
 一个@defterm{特征（trait）}类似于一个mixin，它封装了一组方法添加到一个类里。一个特征不同于一个mixin，它自己的方法是可以用特征运算符操控的，比如@racket[trait-sum]（合并这两个特征的方法）、@racket[trait-exclude]（从一个特征中移除方法）以及@racket[trait-alias]（添加一个带有新名字的方法的拷贝；它不重定向到对任何旧名字的调用）。
 
@@ -415,7 +414,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 假设我们的@racket[fish%]程序员想要定义两个类扩展，@racket[spots]和@racket[stripes]，每个都包含@racket[get-color]方法。fish的spot不应该覆盖的stripe，反之亦然；相反，一个@racket[spots+stripes-fish%]应结合两种颜色，这是不可能的如果@racket[spots]和@racket[stripes]是普通混合实现。然而，如果spots和stripes作为特征来实现，它们可以组合在一起。首先，我们在每个特征中给@racket[get-color]起一个别名为一个不冲突的名称。第二，@racket[get-color]方法从两者中移除，只有别名的特征被合并。最后，新特征用于创建一个类，它基于这两个别名引入自己的@racket[get-color]方法，生成所需的@racket[spots+stripes]扩展。
 
 @; 13.8.1 特征作为混合集-----------------------------------------------------------
-@subsection{特征作为混合集}
+@subsection[#:tag "Traits-as-Sets-of-Mixins"]{特征作为混合集}
 
 在Racket里实现特征的一个自然的方法是如同一组混合，每个特征方法带一个mixin。例如，我们可以尝试如下定义spots和stripes的特征，使用关联列表来表示集合：
 
@@ -465,7 +464,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 因此，当上述特性与其它特性结合，然后应用到类中时，@racket[get-color]的使用将成为外部名称@racket[get-trait-color]的引用。
 
 @; 13.8.2 特征的继承与基类----------------------------------------------------------
-@subsection{特征的继承与基类}
+@subsection[#:tag "Inherit-and-Super-in-Traits"]{特征的继承与基类}
 
 特性的这个第一个实现支持@racket[trait-alias]，它支持一个调用自身的特性方法，但是它不支持调用彼此的特征方法。特别是，假设一个spot-fish的市场价值取决于它的斑点颜色：
 
@@ -508,7 +507,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 有了这个特性编码，  @racket[trait-alias]添加一个带新名称的新方法，但它不会改变对旧方法的任何引用。
 
 @; 13.8.3 trait（特征）表----------------------------------------------------
-@subsection{@racket[trait]（特征）表}
+@subsection[#:tag "The-trait-Form"]{@racket[trait]（特征）表}
 
 通用特性模式显然对程序员直接使用来说太复杂了，但很容易在@racket[trait]宏中编译：
 
@@ -547,12 +546,12 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 @; 13.9 类合约-------------------------------------------------------
 @(class-eval '(require racket/contract))
 
-@section{类合约}
+@section[#:tag "Class-Contracts"]{类合约}
 
 由于类是值，它们可以跨越合约边界，我们可能希望用合约保护给定类的一部分。为此，使用@racket[class/c]表。@racket[class/c]表具有许多子表，其描述关于字段和方法两种类型的合约：有些通过实例化对象影响使用，有些影响子类。
 
 @; 13.9.1 外部类合约--------------------------------------------------------
-@subsection{外部类合约}
+@subsection[#:tag "External-Class-Contracts"]{外部类合约}
 
 在最简单的表中，@racket[class/c]保护从合约类实例化的对象的公共字段和方法。还有一种@racket[object/c]表，可用于类似地保护特定对象的公共字段和方法。获取@racket[animal%]的以下定义，它使用公共字段作为其@racket[size]属性：
 
@@ -627,7 +626,7 @@ mixin的优势是，我们可以很容易地将它们结合起来以创建新的
 (get-field size elephant)]
 
 @; 13.9.2 内部类合约----------------------------------------------------
-@subsection{内部类合约}
+@subsection[#:tag "Internal-Class-Contracts"]{内部类合约}
 
 注意，从@racket[elephant]对象检索@racket[size]字段归咎于@racket[animal%]违反合约。这种归咎是正确的，但对@racket[animal%]类来说是不公平的，因为我们还没有提供一种保护自己免受子类攻击的方法。为此我们添加内部类合约，它提供指令给子类以指明它们如何访问和重写基类的特征。外部类和内部类合约之间的区别在于是否允许类层次结构中较弱的合约，其不变性可能被子类内部破坏，但应通过实例化的对象强制用于外部使用。
 

@@ -8,7 +8,7 @@
 @title{Racket指南}
 
 @author["Matthew Flatt" "Robert Bruce Findler" "PLT"]
-@author["张恒源"]
+@author["张恒源 译"]
 
 本指南适用于新的Racket程序员或部分新的Racket程序员。本指南假定你是有编程经验的。如果您是新学习编程，那么请阅读《如何设计程序》（@|HtDP|）这部分。如果你想特别快地了解Racket语言，从这里开始：《快速：Racket的图片编程介绍》（@|Quick|）这部分。
 
@@ -33,6 +33,7 @@
 @include-section["13.scrbl"]
 @include-section["14.scrbl"]
 @include-section["15.scrbl"]
+@include-section["16.scrbl"]
 
 @; --------------------------------------------------
 

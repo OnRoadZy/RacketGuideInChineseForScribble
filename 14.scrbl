@@ -25,7 +25,7 @@ invocation）}单元的导出变量链接。链接将多个单元合并成单个
 @local-table-of-contents[]
 
 @; 14.1 签名和单元----------------------------------------
-@section{ 签名和单元}
+@section[#:tag "Signatures and Units"]{ 签名和单元}
 
 单元的接口用@deftech{签名（signature）}来描述。每个签名都使用@racket[define-signature]来定义（通常在@racket[module]（模块）中）。例如，下面的签名，放在一个@filepath{toy-factory-sig.rkt}的文件中，描述了一个组件的导出（export），它实现了一个玩具厂（toy factory）：
 
@@ -116,7 +116,7 @@ racket
 请注意，@filepath{toy-store-unit.rkt}导入@filepath{toy-factory-sig.rkt}，而不是@filepath{simple-factory-unit.rkt}。因此，@racket[toy-store@]单元只依赖于玩具工厂的规格，而不是具体的实施。
 
 @; 14.2 调用单元----------------------------------------
-@section{调用单元}
+@section[#:tag "Invoking-Units"]{调用单元}
 
 @racket[simple-factory@]单元没有导入，因此可以使用@racket[invoke-unit]直接调用它：
 
@@ -150,7 +150,7 @@ racket
 同样，@racketidfont{/infer}部分@racket[define-values/invoke-unit/infer]确定@racket[toy-store@]导入@racket[toy-factory^]，因此它提供与@racket[toy-factory^]中的名称匹配的顶级绑定，如导入@racket[toy-store@]。
 
 @; 14.3 链接单元----------------------------------------
-@section{链接单元}
+@section[#:tag "Linking-Units"]{链接单元}
 
 我们可以借助玩具工厂的合作使我们的玩具店玩具经济性更有效，不需要重新创建。相反，玩具总是使用商店的颜色来制造，而工厂的颜色是通过导入@racket[toy-store^]来获得的：
 
@@ -301,7 +301,7 @@ toy-factory^)]行从当前的上下文中获取与@racket[toy-factory^]中的名
 上面的@racket[compound-unit]表使用@racket[store-specific-factory@]作为一个一级单元，尽管它的信息可以推断。除了在推理上下文中的使用外，每个单元都可以用作一个一级单元。此外，各种表让程序员弥合了推断的和一级的世界之间的间隔。例如，@racket[define-unit-binding]将一个新的标识符绑定到由任意表达式生成的单元；它静态地将签名信息与标识符相关联，并动态地对表达式产生的一级单元进行签名检查。
 
 @; 14.5 完整的-module签名和单元----------------------------------------
-@section{完整的@racket[module]签名和单元}
+@section[#:tag "Whole-module-Signatures-and-Units"]{完整的@racket[module]签名和单元}
 
 在程序中使用的单元，模块如@filepath{toy-factory-sig.rkt}和@filepath{simple-factory-unit.rkt}是常见的。@racket[racket/signature]和@racket[racket/unit]模块的名称可以作为语言来避免大量的样板模块、签名和单元申明文本。
 
@@ -345,12 +345,12 @@ racket/unit
 @; 14.6 单元合约----------------------------------------
 @(interaction-eval #:eval toy-eval (require racket/contract))
 
-@section{单元合约}
+@section[#:tag "Contracts-for-Units"]{单元合约}
 
 有两种用合约保护单元的方法。一种方法在编写新的签名时是有用的，另一种方法当一个单元必须符合已经存在的签名时就可以处理这种情况。
 
 @; 14.6.1 给签名添加合约--------------------------------------------
-@subsection{给签名添加合约}
+@subsection[#:tag "Adding-Contracts-to-Units"]{给签名添加合约}
 
 当合约添加到签名时，实现该签名的所有单元都受到这些合约的保护。@racket[toy-factory^]签名的以下版本添加了前面说明中写过的合约：
 
@@ -405,7 +405,7 @@ racket
 ]
 
 @; 14.6.2 给单元添加合约---------------------------------------------------
-@subsection{给单元添加合约}
+@subsection[#:tag "Adding-Contracts-to-Units"]{给单元添加合约}
 
 然而，有时我们可能有一个单元，它必须符合一个已经存在的签名而不是符合合约。在这种情况下，我们可以创建一个带@racket[unit/c]或使用@racket[define-unit/contract]表的单元合约，它定义了一个已被单元合约包装的单元。
 
@@ -449,7 +449,7 @@ racket
 ]
 
 @; 14.7 unit（单元）与module（模块）的比较----------------------------------------
-@section{@racket[unit]（单元）与@racket[module]（模块）的比较}
+@section[#:tag "unit-versus-module"]{@racket[unit]（单元）与@racket[module]（模块）的比较}
 
 作为模块的一个表，@racket[unit]（单元）是对@racket[module]（模块）的补充：
 
